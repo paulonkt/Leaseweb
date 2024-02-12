@@ -1,0 +1,14 @@
+<div [formGroup]="form">
+	<div class="row">
+		<div class="col-md-3 mb-2">
+			<label>Memory</label>
+		</div>
+		<div class="col-md-9 ">
+			<div class="mb-2" *ngFor="let option of memoryValues; let i = index">
+				<input type="checkbox" [id]="'memory_'+i" (change)="toggleCheckbox(i)">
+				<label class="ms-2" [for]="'memory_'+i">{{ option.value }}</label>
+			</div>
+			<input type="hidden" formControlName="memory">
+		</div>
+	</div>
+</div>

@@ -1,0 +1,13 @@
+<div [formGroup]="form">
+	<div class="row">
+		<div class="col-md-3 mb-2">
+			<label>HD type</label>
+		</div>
+		<div class="col-md-9 mb-2">
+			<select class="form-control w-75" formControlName="hdType">
+				<option value="">Select one option</option>
+				<option *ngFor="let hdValue of hdTypeValues" [value]="hdValue">{{ hdValue }}</option>
+			</select>
+		</div>
+	</div>
+</div>

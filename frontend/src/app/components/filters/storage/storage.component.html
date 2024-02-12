@@ -1,0 +1,17 @@
+<div [formGroup]="form">
+	<div class="row">
+		<div class="col-md-3 mb-2">
+			<label>Storage capacity</label>
+		</div>
+		<div class="col-md-9 mb-2">
+			<input type="range" class="form-range w-75"
+				[min]="1"
+				[max]="storageValues.length"
+				[step]="1"
+				[value]="selectedKey ?? 1"
+				(input)="onSliderInput($event)">
+			<label class="ms-2">{{ getValueForKey(selectedKey ?? 1) }}</label>
+			<input type="hidden" formControlName="storage">
+		</div>
+	</div>
+</div>

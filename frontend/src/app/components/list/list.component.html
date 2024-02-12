@@ -1,0 +1,14 @@
+<table *ngIf="isValid" class="table table-striped table-hover">
+	<thead>
+		<tr>
+			<th *ngFor="let col of displayedColumns" scope="col">{{ col }}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let row of data">
+			<td *ngFor="let col of displayedColumns">
+				{{ row[col]?.toString() }}
+			</td>
+		</tr>
+	</tbody>
+</table>
